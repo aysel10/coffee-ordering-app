@@ -17,9 +17,9 @@ extension Coffee {
     
     static func all() -> [Coffee] {
         return [
-            Coffee(name: "Cappuchino", imageUrl: "cap", price: 2.5),
-            Coffee(name: "Espresso", imageUrl: "esp", price: 2.0),
-            Coffee(name: "Americano", imageUrl: "amr", price: 2.2)
+            Coffee(name: "Cappuccino", imageUrl: "Cappuccino", price: 2.5),
+            Coffee(name: "Espresso", imageUrl: "Espresso", price: 2.0),
+            Coffee(name: "Americano", imageUrl: "Americano", price: 2.2)
         ]
     }
 }
