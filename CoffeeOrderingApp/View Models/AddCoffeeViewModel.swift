@@ -15,6 +15,8 @@ class AddCoffeeViewModel: ObservableObject {
     @Published var size: String = "Medium"
     @Published var coffeeName: String = ""
     
+    
+    
     var coffeeList: [CoffeeViewModel] {
         return Coffee.all().map(CoffeeViewModel.init)
     }
