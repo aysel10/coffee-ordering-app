@@ -24,6 +24,8 @@
 		F98402CD2745443400D35DD5 /* CoffeeOrderingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98402CC2745443400D35DD5 /* CoffeeOrderingAppTests.swift */; };
 		F98402D52745469700D35DD5 /* UnitTestingCoffeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98402D42745469700D35DD5 /* UnitTestingCoffeeView.swift */; };
 		F98402D727454CE600D35DD5 /* UnitTestingCoffeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98402D627454CE600D35DD5 /* UnitTestingCoffeeViewModel.swift */; };
+		F98402D92745C7D900D35DD5 /* EscapingPractise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98402D82745C7D900D35DD5 /* EscapingPractise.swift */; };
+		F98402DC27469D5300D35DD5 /* SubscriberPractise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98402DB27469D5300D35DD5 /* SubscriberPractise.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		F98402CC2745443400D35DD5 /* CoffeeOrderingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeOrderingAppTests.swift; sourceTree = "<group>"; };
 		F98402D42745469700D35DD5 /* UnitTestingCoffeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingCoffeeView.swift; sourceTree = "<group>"; };
 		F98402D627454CE600D35DD5 /* UnitTestingCoffeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingCoffeeViewModel.swift; sourceTree = "<group>"; };
+		F98402D82745C7D900D35DD5 /* EscapingPractise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapingPractise.swift; sourceTree = "<group>"; };
+		F98402DB27469D5300D35DD5 /* SubscriberPractise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberPractise.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 		7D4D60F5271B42CF00E6071D /* CoffeeOrderingApp */ = {
 			isa = PBXGroup;
 			children = (
+				F98402DA27469D3D00D35DD5 /* Practise */,
 				7D4D6115271B7C2C00E6071D /* Views */,
 				7D4D6111271B4D8500E6071D /* View Models */,
 				7D4D610D271B482400E6071D /* Services */,
@@ -173,6 +178,15 @@
 				F98402D627454CE600D35DD5 /* UnitTestingCoffeeViewModel.swift */,
 			);
 			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		F98402DA27469D3D00D35DD5 /* Practise */ = {
+			isa = PBXGroup;
+			children = (
+				F98402D82745C7D900D35DD5 /* EscapingPractise.swift */,
+				F98402DB27469D5300D35DD5 /* SubscriberPractise.swift */,
+			);
+			path = Practise;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +290,7 @@
 			files = (
 				7D4D60F9271B42CF00E6071D /* ContentView.swift in Sources */,
 				7D4D6D4A271F1C9F004630F8 /* AddCoffeeOrderView.swift in Sources */,
+				F98402DC27469D5300D35DD5 /* SubscriberPractise.swift in Sources */,
 				7D4D60F7271B42CF00E6071D /* CoffeeOrderingAppApp.swift in Sources */,
 				7D4D610B271B462C00E6071D /* Order.swift in Sources */,
 				7D4D611A271C3E4900E6071D /* CreateOrderResponse.swift in Sources */,
@@ -287,6 +302,7 @@
 				7D4D6108271B434700E6071D /* Coffee.swift in Sources */,
 				7D4D610F271B483800E6071D /* CoffeeService.swift in Sources */,
 				7D4D6D4D271F3602004630F8 /* OrderTotalView.swift in Sources */,
+				F98402D92745C7D900D35DD5 /* EscapingPractise.swift in Sources */,
 				7D4D611D271C411E00E6071D /* AddCoffeeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -416,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -436,7 +452,7 @@
 				DEVELOPMENT_TEAM = G8C873B28V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CoffeeOrderingApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,7 +474,7 @@
 				DEVELOPMENT_TEAM = G8C873B28V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CoffeeOrderingApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
