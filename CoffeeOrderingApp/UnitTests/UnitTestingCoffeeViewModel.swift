@@ -7,36 +7,20 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
-protocol NewDataServiceProtocol {
-    
-}
 
-class NewMockDataSErice: NewDataServiceProtocol {
-    
-    let items : [String]
-    
-    init(items: [String]?){
-        self.items = items ?? [
-            "one", "two", "three"
-        ]
-    }
-    
-    func downloadItemsWithEscaping(completion: @escaping (_ items: String) -> ()){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            //completion(self.items)
-        }
-    }
-    
-}
 
 class UnitTestingCoffeeViewModel: ObservableObject {
     @Published var isPremium: Bool
     @Published var dataArray: [String] = []
     @Published var selectedItem: String? = nil
+    var cancellables = Set<AnyCancellable>()
+    let dataService: NewDataServiceProtocol
     
-    init(isPremium: Bool){
+    init(isPremium: Bool, dataService: NewDataServiceProtocol = NewMockDataService(items: nil)){
         self.isPremium = isPremium
+        self.dataService = dataService
     }
     
     func addItem(item: String) {
@@ -69,5 +53,20 @@ class UnitTestingCoffeeViewModel: ObservableObject {
     enum DataError: LocalizedError {
         case noData
         case itemNotFound
+    }
+    
+    func downloadWithEscaping() {
+        dataService.downloadItemsWithEscaping { [weak self] items in
+            self?.dataArray = items
+        }
+    }
+    
+    func downloadWithCombine(){
+        dataService.downloadItemsWithCombine()
+            .sink { _ in
+                
+            } receiveValue: { [weak self] returnedItems in
+                self?.dataArray = returnedItems
+            }.store(in: &cancellables)
     }
 }

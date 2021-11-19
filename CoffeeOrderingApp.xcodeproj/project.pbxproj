@@ -26,6 +26,8 @@
 		F98402D727454CE600D35DD5 /* UnitTestingCoffeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98402D627454CE600D35DD5 /* UnitTestingCoffeeViewModel.swift */; };
 		F98402D92745C7D900D35DD5 /* EscapingPractise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98402D82745C7D900D35DD5 /* EscapingPractise.swift */; };
 		F98402DC27469D5300D35DD5 /* SubscriberPractise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98402DB27469D5300D35DD5 /* SubscriberPractise.swift */; };
+		F98402E0274708B800D35DD5 /* NewMockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98402DF274708B800D35DD5 /* NewMockDataService.swift */; };
+		F98402E22747090700D35DD5 /* NewMockDataService_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98402E12747090700D35DD5 /* NewMockDataService_Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		F98402D627454CE600D35DD5 /* UnitTestingCoffeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingCoffeeViewModel.swift; sourceTree = "<group>"; };
 		F98402D82745C7D900D35DD5 /* EscapingPractise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapingPractise.swift; sourceTree = "<group>"; };
 		F98402DB27469D5300D35DD5 /* SubscriberPractise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberPractise.swift; sourceTree = "<group>"; };
+		F98402DF274708B800D35DD5 /* NewMockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMockDataService.swift; sourceTree = "<group>"; };
+		F98402E12747090700D35DD5 /* NewMockDataService_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMockDataService_Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				F98402CC2745443400D35DD5 /* CoffeeOrderingAppTests.swift */,
+				F98402E12747090700D35DD5 /* NewMockDataService_Tests.swift */,
 			);
 			path = CoffeeOrderingAppTests;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 			children = (
 				F98402D42745469700D35DD5 /* UnitTestingCoffeeView.swift */,
 				F98402D627454CE600D35DD5 /* UnitTestingCoffeeViewModel.swift */,
+				F98402DF274708B800D35DD5 /* NewMockDataService.swift */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -297,6 +303,7 @@
 				7D4D6120271C459E00E6071D /* CoffeeListViewModel.swift in Sources */,
 				F98402D727454CE600D35DD5 /* UnitTestingCoffeeViewModel.swift in Sources */,
 				7D4D6117271B7C7100E6071D /* OrderListView.swift in Sources */,
+				F98402E0274708B800D35DD5 /* NewMockDataService.swift in Sources */,
 				7D4D6113271B4DD500E6071D /* OrderListViewModel.swift in Sources */,
 				F98402D52745469700D35DD5 /* UnitTestingCoffeeView.swift in Sources */,
 				7D4D6108271B434700E6071D /* Coffee.swift in Sources */,
@@ -311,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F98402E22747090700D35DD5 /* NewMockDataService_Tests.swift in Sources */,
 				F98402CD2745443400D35DD5 /* CoffeeOrderingAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

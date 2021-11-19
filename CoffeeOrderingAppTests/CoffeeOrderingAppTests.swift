@@ -8,6 +8,8 @@
 import XCTest
 import Foundation
 import SwiftUI
+import Combine
+
 @testable import CoffeeOrderingApp
 
 
@@ -20,6 +22,7 @@ import SwiftUI
 class CoffeeOrderingAppTests: XCTestCase {
     
     var viewModel: UnitTestingCoffeeViewModel?
+    var cancellables = Set<AnyCancellable>()
         
 
     override func setUpWithError() throws {
@@ -255,6 +258,46 @@ class CoffeeOrderingAppTests: XCTestCase {
         }catch{
             XCTFail()
         }
+    }
+    
+    func test_UnitTestingCoffeeViewModel_downloadWithEscaping_shouldReturnItems() throws{  //async code test
+        //Given
+        let vm = UnitTestingCoffeeViewModel(isPremium: Bool.random())
+
+        //When
+        let expectation = XCTestExpectation(description: "Should return items after 3 seconds")
+        
+        vm.$dataArray
+            .dropFirst()
+            .sink { returnedItems in
+                expectation.fulfill()
+            }.store(in: &cancellables)
+        
+        vm.downloadWithEscaping()
+        
+        //Then
+        wait(for: [expectation], timeout: 5)
+        XCTAssertGreaterThan(vm.dataArray.count, 0)
+    }
+    
+    func test_UnitTestingCoffeeViewModel_downloadWithCombine_shouldReturnItems() throws{  //async code test
+        //Given
+        let vm = UnitTestingCoffeeViewModel(isPremium: Bool.random())
+
+        //When
+        let expectation = XCTestExpectation(description: "Should return items after a seconds")
+        
+        vm.$dataArray
+            .dropFirst()
+            .sink { returnedItems in
+                expectation.fulfill()
+            }.store(in: &cancellables)
+        
+        vm.downloadWithCombine()
+        
+        //Then
+        wait(for: [expectation], timeout: 5)
+        XCTAssertGreaterThan(vm.dataArray.count, 0)
     }
     
     func testPerformanceExample() throws {
